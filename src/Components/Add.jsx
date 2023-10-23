@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Button, Modal, Form } from 'react-bootstrap';
 import { uploadVideo } from '../services/allAPI';
 // import { Form } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Add({setUploadVideoServerResponse}) {
     const [show, setShow] = useState(false);
@@ -30,7 +32,7 @@ function Add({setUploadVideoServerResponse}) {
        const hangleAdd = async ()=>{
         const {id, caption,name,url,embedlink}= video
         if(!id || !caption ||!name || !url || !embedlink){
-            alert("Please form completely")
+            toast.warning("Please form completely!!!!")
         }else{
         //    make api call
         const response = await uploadVideo(video)
@@ -40,10 +42,10 @@ function Add({setUploadVideoServerResponse}) {
             setUploadVideoServerResponse(response.data)
             // hide modal
             handleClose()
-            alert(`${response.data.caption} video succesfully added.....`)
+            toast.success(`${response.data.caption} video succesfully added.....`)
             
         }else{
-            alert("Please provide unique id for loading videos....")
+            toast.error("Uploading Error Please Wait Some Time....")
         }
 
         }
@@ -98,6 +100,10 @@ function Add({setUploadVideoServerResponse}) {
                     <Button variant="primary" onClick={hangleAdd}>Add</Button>
                 </Modal.Footer>
             </Modal>
+            <ToastContainer style={{fontSize:'15px'}} 
+            position='top-center'
+            theme='colored'
+            autoClose={2000}/>
         </>
     )
 }
