@@ -46,8 +46,8 @@ await addHistory(requestBody)
       <Card className='mb-5' >
       <Card.Img onClick={handleShow} style={{height:'180px'}} variant="top" src={displayData?.url} />
       <Card.Body>
-        <Card.Title className='d-flex flex-column justify-content-center align-items-center'><h4>{displayData?.caption}</h4>
-        <h5>{displayData?.name}</h5>
+        <Card.Title className='d-flex flex-column justify-content-center align-items-center'><h4 style={{color:'orange'}}>{displayData?.caption}</h4>
+        <h5 style={{color:'black'}}>{displayData?.name}</h5>
 
        <div className='d-flex flex-row justify-content-between align-items-center'>
           <Button onClick={()=>handleSelect()} variant="primary">selected</Button>

@@ -7,10 +7,11 @@ import { Link } from 'react-router-dom'
 function Home() {
   return (
     <>
+    <h1 style={{textAlign:'center',fontFamily:'initial',fontSize:'60PX',fontWeight:'700'}} className=''>PLAN YOURE TRIP</h1>
 
       <Corosel />
       <div  className='d-flex justify-content-center align-items-center'>
-        <Link  style={{textDecoration:'none'}} className=' rounded mt-3 m-5 p-5 d-flex flex-row justify-content-center align-items-center' to={'/view'}>     <h1 style={{fontSize:'50px',color:'green',fontFamily:'inherit'}}>Travel List</h1> <i style={{color:'green',fontSize:'100px m-3 p-3' }} className="fa-solid fa-arrow-right fa-beat "> </i></Link>
+        <Link  style={{textDecoration:'none',backgroundColor:'bisque'}} className=' rounded mt-3 m-5 p-2 d-flex flex-row justify-content-center align-items-center border' to={'/view'}>     <h1 style={{fontSize:'50px',color:'green',fontFamily:'inherit',fontWeight:'700'}}>Travel List</h1> <i style={{color:'green',fontSize:'100px m-3 p-3' }} className="fa-solid fa-arrow-right fa-beat "> </i></Link>
       </div>
 
        <h3 style={{fontSize:'50px'}} className=' p-2'>Discover our trip planner</h3>
@@ -27,7 +28,7 @@ function Home() {
           <span className='p-3'style={{color:'gray'}}>Getting Here & Around</span>
           <h2 className='p-3'style={{color:'crimson'}}>Transportation</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus repudiandae aspernatur omnis voluptates necessitatibus assumenda perspiciatis cumque ratione blanditiis, accusamus perferendis quia facere commodi nobis libero ab. Dolor, id enim!</p>
-        <button className='btn btn-success m-5 p-2 rounded'>Learn more</button></div>
+        <button style={{backgroundColor:'crimson',color:'white'}} className='btn  m-5 p-2 rounded'>Learn more</button></div>
       </div>
 
       <div className='d-flex flex-row justify-content-center align-items-center  p-3 shadow'>
@@ -36,7 +37,7 @@ function Home() {
           <span className='p-3'style={{color:'gray'}}>Buckle up</span>
           <h2 className='p-3'style={{color:'crimson'}}>Road Trip Guide</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus repudiandae aspernatur omnis voluptates necessitatibus assumenda </p>
-        <button className='btn btn-success m-5 p-2 rounded'>Learn more</button></div>
+        <button style={{backgroundColor:'crimson',color:'white'}} className='btn  m-5 p-2 rounded'>Learn more</button></div>
         <img className='m-5 p-5' height={'500px'} src="https://scth.scene7.com/is/image/scth/getting_around_01_1920x1080:crop-375x210?defaultImage=getting_around_01_1920x1080&wid=580&hei=324" alt="" />
       </div>
 
@@ -47,7 +48,7 @@ function Home() {
           <span className='p-3'style={{color:'gray'}}>Getting Here & Around</span>
           <h2 className='p-3'style={{color:'crimson'}}>Your best Travel holiday awaits</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus repudiandae aspernatur omnis voluptates necessitatibus assumenda perspiciatis c</p>
-        <button className='btn btn-success m-5 p-2 rounded'>Learn more</button></div>
+        <button style={{backgroundColor:'crimson',color:'white'}} className='btn  m-5 p-2 rounded'>Learn more</button></div>
       </div>
     </>
   )

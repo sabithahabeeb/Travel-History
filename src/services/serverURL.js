@@ -1,1 +1,1 @@
-export const serverURL = "http://localhost:4000"
+export const serverURL = "https://travelserver-i43p.onrender.com"
